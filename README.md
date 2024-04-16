@@ -1,18 +1,18 @@
 # Nome do projeto
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O projeto tem como objetivo disponibilizar uma plataforma que oferece aos usuários recursos e ferramentas para o planejamento e gestão de suas finanças, despesas e investimentos financeiros.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Luiz Felipe Luppi Mendonça
+* Pedro Barros Lemos
+* Bernardo Alvarez de Souza Lima
+* Ilan Cohen Bouissou Santana
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Simone Alves Nogueira
 
 ## Instruções de utilização
 
