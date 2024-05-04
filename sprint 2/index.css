@@ -1,0 +1,45 @@
+/* Estilo da tabela */
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  /* Estilo das células da tabela */
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    width: 300px;
+  }
+  
+
+
+  /* Estilo das células do cabeçalho da tabela */
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:not(:first-child):hover th{
+    background-color: #EEE8AA
+    ;
+  }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.button {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #7d2ae8;
+    transition: all 0.2s ease;
+  }
+  
