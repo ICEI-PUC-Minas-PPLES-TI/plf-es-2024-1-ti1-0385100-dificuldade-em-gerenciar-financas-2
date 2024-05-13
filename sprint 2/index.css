@@ -1,19 +1,28 @@
-/* Estilo da tabela */
-table {
-    width: 1000px;
-    border-collapse: collapse;
-    text-align: center;
-  }
-  
-  /* Estilo das células da tabela */
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-    text-align: center;
-    width: 300px;
-  }
-  
+
+.logo
+{
+  align-items: start;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff8d21;
+  text-align: center;
+  box-sizing: content-box;
+  color: white;
+}
+
+
+.header-right {
+  float: right;
+}
+
+header img {
+  width: 100px;
+}
 
 
   /* Estilo das células do cabeçalho da tabela */
@@ -31,15 +40,80 @@ body{
 }
 
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff8d21;
+padding: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos adicionais para os links */
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
 
 .button {
     position: relative;
-    padding: 10px 22px;
     border-radius: 6px;
     border: none;
-    color: #fff;
+    color: white;
     cursor: pointer;
-    background-color: #7d2ae8;
+    background-color: #ff8d21;
+    padding-top: 10px;
+     padding-bottom: 10px;
     transition: all 0.2s ease;
   }
   
+
+  /* Estilo da tabela */
+table {
+  width: 1000px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Estilo das células da tabela */
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #E9F3FA;
+}
+
+.form{
+  margin: 0 auto;
+   width: 500px;
+   flex-direction: column;
+}
+
+input{
+  width: 100%;
+  box-sizing: content-box;
+  
+}
+
+
+
+.tabela{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

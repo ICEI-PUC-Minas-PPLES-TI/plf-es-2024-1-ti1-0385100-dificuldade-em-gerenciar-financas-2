@@ -9,7 +9,22 @@
 
 </head>
 
+
 <body>
+<header>
+    <div class="header-content">
+        <a href="index.html"><img class="logo" src="baixados (5).png"></a>
+        <div class="header-right">
+            <a href="embreve.html">Cofrinho</a>
+            <a href="embreve.html">B3</a>
+            <a href="embreve.html">Crypto</a>
+            <a href="embreve.html">Área do usuário</a>
+        </div>
+    </div>
+</header>
+
+<div class="form">
+<form>
     <p> Qual valor você gostaria de investir? </p>
     <input type="number" id="valor_investido" />
 
@@ -20,9 +35,10 @@
     <input type="number" id="meses_investidos" /> meses
 
     <input type="button" onclick="calcularRetornoInvestimento()" value="Calcular" class="button">
-
-
-    <p id="total"></p>
+</form>
+</div>
+<br>
+<div class="tabela">
     <table>
         <tr class="titulo">
             <th class="titulo" colspan="3">Calculadora de investimentos</th>
@@ -73,7 +89,14 @@
     </table>
 
     <p> Em valores estimados*</p>
+    </div>
     <script src="index.js"></script>
+
+
+
+    <footer>
+        <p>Este é o rodapé.</p>
+    </footer>
 </body>
 
 </html>
