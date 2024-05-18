@@ -66,7 +66,6 @@ function calcularRetornoInvestimento() {
         }
 
         // Atualizar os elementos HTML com os resultados calculados
-        document.getElementById("total").innerHTML = ("R$" + valor_total.toFixed(2));
         document.getElementById("investido").innerHTML = ("R$" + valor_total.toFixed(2));
 
         document.getElementById("poupanca").innerHTML = "R$" + parseFloat(total_poupanca).toFixed(2);
