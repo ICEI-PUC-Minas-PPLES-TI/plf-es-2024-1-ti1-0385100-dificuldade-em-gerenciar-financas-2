@@ -143,3 +143,23 @@ input{
   display: flex;
   justify-content: space-around;
 }
+
+#artigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+#artigo p{
+  width: 50%;
+}
+
+#artigo img {
+  width: 500px;
+}
+
+.blog {
+  text-align: center;
+}

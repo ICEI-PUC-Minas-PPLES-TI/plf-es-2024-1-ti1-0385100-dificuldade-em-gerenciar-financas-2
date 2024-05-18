@@ -1,0 +1,1 @@
+apenas extraia a pasta "sprint 2" e use as funcionalidades
