@@ -32,13 +32,12 @@
         <div class="header">
             <p>Gastos:</p>
             <div>
-                
-                <button>Adicionar</button>
-                <button>Remover</button>
-                <button>Editar</button>
+                <button onclick="adicionar()">Adicionar</button>
+                <button onclick="remover()">Remover</button>
+                <button onclick="editar(event)">Editar</button>
             </div>
         </div>
-        <div class="items"> </div>
+        <ul id="post-list" class="post-list"> </ul>
     </div>
 
     <div class="quadro">

@@ -30,3 +30,8 @@ justify-content: space-around;
             margin: 5px 0;
             flex-direction: column;
         }
+
+
+        .selected {
+            background-color: #d3d3d3; /* Highlight selected items */
+        }

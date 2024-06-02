@@ -52,13 +52,6 @@ function loadPosts() {
       data.forEach(post => {
         const listItem = document.createElement('li');
         listItem.textContent = `${post.titulo}" "${post.autor}" "${post.categoria}`;
-        const deleteButton = document.createElement('button');
-
-        deleteButton.textContent = 'Deletar';
-        deleteButton.addEventListener('click', () => deletePost(post.id));
-
-        listItem.appendChild(deleteButton);
-        postList.appendChild(listItem);
       });
     })
     .catch(error => console.error('Erro ao buscar posts:', error));
