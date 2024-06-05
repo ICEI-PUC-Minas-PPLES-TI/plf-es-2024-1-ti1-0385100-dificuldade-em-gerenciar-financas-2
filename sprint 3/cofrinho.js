@@ -2,19 +2,18 @@ var total_gastos;
 var total_entradas;
 var total_liquido = total_entradas - total_gastos;
 
-function adicionar(){
 
-    const tipo = prompt("qual o tipo")
+function adicionarSaldo(){
     const nome = prompt("Qual o nome")
     const valor = prompt("qual o valor")
     
-fetch("http://localhost:3000/cofrinho",{
+fetch("http://localhost:3000/saldo",{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        tipo: tipo,
+      idCliente: null,
         nome: nome,
         valor: valor
     })
@@ -27,33 +26,29 @@ fetch("http://localhost:3000/cofrinho",{
   .catch(error => console.error('Erro ao adicionar usuario:', error));
 }
 
-
-
-  function loadPosts() {
-    fetch('http://localhost:3000/cofrinho')
-    .then(response => response.json())
-    .then(data => {
-        const postList = document.getElementById('post-list');
-        postList.innerHTML = '';
-        data.forEach(post => {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${post.nome}: R$${post.valor}`;
-            listItem.dataset.id = post.id; // Store the post id in the dataset
-            listItem.onclick = () => listItem.classList.toggle('selected');
-            postList.appendChild(listItem);  // Append each list item to the post list
-        });
-    })
-    .catch(error => console.error('Erro ao buscar posts:', error));
+function loadPosts() {
+  fetch('http://localhost:3000/saldo')
+  .then(response => response.json())
+  .then(data => {
+      const postList = document.getElementById('saldo-list');
+      postList.innerHTML = '';
+      data.forEach(post => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${post.nome}: R$${post.valor}`;
+          listItem.dataset.id = post.id; // Store the post id in the dataset
+          listItem.onclick = () => listItem.classList.toggle('selected');
+          postList.appendChild(listItem);  // Append each list item to the post list
+      });
+  })
+  .catch(error => console.error('Erro ao buscar posts:', error));
 }
 
-
-function remover() {
-const postList = document.getElementById('post-list');
+function removerSaldo() {
 const selectedItems = postList.querySelectorAll('.selected');
 selectedItems.forEach(item => {
     const postId = item.dataset.id;
     // Send DELETE request to the server
-    fetch(`http://localhost:3000/cofrinho/${postId}`, {
+    fetch(`http://localhost:3000/saldo/${postId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -72,27 +67,24 @@ selectedItems.forEach(item => {
 }
 
 
-function editar(event) {
+function editarSaldo(event) {
     event.preventDefault();
 
-    const novoTipo = prompt("Novo tipo:");
     const novoNome = prompt("Novo nome:");
     const novoValor = prompt("Novo valor:");
 
-    const postList = document.getElementById('post-list');
+    const postList = document.getElementById('saldo-list');
     const selectedItems = postList.querySelectorAll('.selected');
     selectedItems.forEach(item => {
       const postId = item.dataset.id;
 
       console.log(`Atualizando post com ID: ${postId}`);
-
-      fetch(`http://localhost:3000/cofrinho/${postId}`, {
+      fetch(`http://localhost:3000/saldo/${postId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          tipo: novoTipo,
           nome: novoNome,
           valor: novoValor
         })
@@ -113,6 +105,5 @@ function editar(event) {
     
 
 // Call the function to load posts when the page loads
-window.onload = loadPosts;
-
+loadPosts();
 

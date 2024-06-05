@@ -1,16 +1,34 @@
 {
-  "cofrinho": [
+  "saldo": [
     {
-      "tipo": "wwwwwww",
-      "nome": "eeeeeeee",
-      "valor": "222222",
-      "id": "8f7f"
+      "id": 1,
+      "nome": "Ca1",
+      "valor": 100
     },
     {
-      "id": "36cc",
-      "tipo": "eeeeee",
-      "nome": "eeeeeewwwwwwww",
-      "valor": "ddddddd"
+      "id": 2,
+      "nome": "Conta2",
+      "valor": 200
+    }
+  ],
+  "gastos": [
+    {
+      "id": "5b75",
+      "idCliente": null,
+      "nome": "teste",
+      "valor": "teste"
+    }
+  ],
+  "metas": [
+    {
+      "id": 1,
+      "nome": "C3wonta1",
+      "valor": 100
+    },
+    {
+      "id": 2,
+      "nome": "Conta2",
+      "valor": 200
     }
   ]
 }

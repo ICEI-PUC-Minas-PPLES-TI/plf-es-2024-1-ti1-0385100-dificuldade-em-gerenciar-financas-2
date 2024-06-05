@@ -30,25 +30,26 @@
 <div class="fileira">
     <div class="quadro">
         <div class="header">
-            <p>Gastos:</p>
+            <p>Saldo:</p>
             <div>
-                <button onclick="adicionar()">Adicionar</button>
-                <button onclick="remover()">Remover</button>
-                <button onclick="editar(event)">Editar</button>
+                <button onclick="adicionarSaldo()">Adicionar</button>
+                <button onclick="removerSaldo()">Remover</button>
+                <button onclick="editarSaldo(event)">Editar</button>
             </div>
         </div>
-        <ul id="post-list" class="post-list"> </ul>
+        <ul id="saldo-list" class="post-list"> </ul>
     </div>
 
     <div class="quadro">
         <div class="header">
             <p>Gastos:</p>
             <div>
-                <button>Adicionar</button>
-                <button>Remover</button>
-                <button>Editar</button>
+                <button onclick="adicionarGasto()">Adicionar</button>
+                <button onclick="removerGasto()">Remover</button>
+                <button onclick="editarGasto(event)">Editar</button>
             </div>
         </div>
+        <ul id="gastos-list" class="post-list"> </ul>
     </div>
 </div>
 <br>    
@@ -57,11 +58,12 @@
         <div class="header">
             <p>Metas:</p>
             <div>
-                <button>Adicionar</button>
-                <button>Remover</button>
-                <button>Editar</button>
+                <button onclick="adicionarMetas()">Adicionar</button>
+                <button onclick="removerMetas()">Remover</button>
+                <button onclick="editarMetas(event)">Editar</button>
             </div>
         </div>
+        <ul id="metas-list" class="post-list"> </ul>
     </div>
    <div class="quadro">   <p>Saldo:</p>
 
@@ -70,6 +72,8 @@
 
 
     <script src="cofrinho.js"></script>
+    <script src="cofrinhoMetas.js"></script>
+
  </body>
 
 </html>
