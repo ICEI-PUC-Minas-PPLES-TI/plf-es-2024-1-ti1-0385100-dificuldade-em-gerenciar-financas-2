@@ -1,8 +1,3 @@
-var total_gastos;
-var total_entradas;
-var total_liquido = total_entradas - total_gastos;
-
-
 function adicionarSaldo(){
     const nome = prompt("Qual o nome")
     const valor = prompt("qual o valor")
@@ -32,22 +27,26 @@ function loadPosts() {
   .then(data => {
       const postList = document.getElementById('saldo-list');
       postList.innerHTML = '';
+      let total_entradas = 0; // Inicializa a variável total
+
       data.forEach(post => {
           const listItem = document.createElement('li');
           listItem.textContent = `${post.nome}: R$${post.valor}`;
-          listItem.dataset.id = post.id; // Store the post id in the dataset
+          listItem.dataset.id = post.id; // Armazena o id do post no dataset
           listItem.onclick = () => listItem.classList.toggle('selected');
-          postList.appendChild(listItem);  // Append each list item to the post list
+          postList.appendChild(listItem);  // Anexa cada item de lista à lista de posts
+
+          total_entradas += parseInt(post.valor);
       });
   })
   .catch(error => console.error('Erro ao buscar posts:', error));
 }
 
 function removerSaldo() {
+  const postList = document.getElementById('saldo-list'); 
 const selectedItems = postList.querySelectorAll('.selected');
 selectedItems.forEach(item => {
     const postId = item.dataset.id;
-    // Send DELETE request to the server
     fetch(`http://localhost:3000/saldo/${postId}`, {
         method: 'DELETE',
         headers: {
@@ -107,3 +106,30 @@ function editarSaldo(event) {
 // Call the function to load posts when the page loads
 loadPosts();
 
+function calcularSaldoLiquido() {
+  fetch('http://localhost:3000/saldo')
+  .then(response => response.json())
+  .then(saldoData => {
+      // Calcula o total de entradas
+      let total_entradas = saldoData.reduce((acc, post) => acc + parseInt(post.valor), 0);
+
+      fetch('http://localhost:3000/gastos')
+      .then(response => response.json())
+      .then(gastosData => {
+          // Calcula o total de saídas
+          let total_saidas = gastosData.reduce((acc, post) => acc + parseInt(post.valor), 0);
+
+          // Calcula o saldo líquido
+          let total_liquido = total_entradas - total_saidas;
+          
+          console.log("Total de Entradas:", total_entradas);
+          console.log("Total de Saídas:", total_saidas);
+          console.log("Saldo Líquido:", total_liquido);
+      })
+      .catch(error => console.error('Erro ao buscar gastos:', error));
+  })
+  .catch(error => console.error('Erro ao buscar saldo:', error));
+}
+
+// Chamando a função para calcular o saldo líquido
+calcularSaldoLiquido();

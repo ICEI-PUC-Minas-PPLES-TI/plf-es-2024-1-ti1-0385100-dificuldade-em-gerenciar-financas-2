@@ -1,34 +1,31 @@
 {
   "saldo": [
     {
-      "id": 1,
-      "nome": "Ca1",
-      "valor": 100
+      "id": "937b",
+      "idCliente": null,
+      "nome": "a",
+      "valor": "100"
     },
     {
-      "id": 2,
-      "nome": "Conta2",
-      "valor": 200
+      "id": "f11a",
+      "idCliente": null,
+      "nome": "b",
+      "valor": "29"
     }
   ],
   "gastos": [
     {
-      "id": "5b75",
+      "id": "ee43",
       "idCliente": null,
-      "nome": "teste",
-      "valor": "teste"
+      "nome": "s",
+      "valor": "30"
     }
   ],
   "metas": [
     {
-      "id": 1,
-      "nome": "C3wonta1",
-      "valor": 100
-    },
-    {
-      "id": 2,
-      "nome": "Conta2",
-      "valor": 200
+      "nome": "sss",
+      "valor": "12",
+      "id": "c1b0"
     }
   ]
 }

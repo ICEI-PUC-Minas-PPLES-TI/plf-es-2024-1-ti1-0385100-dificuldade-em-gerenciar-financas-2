@@ -4,14 +4,18 @@ function loadData(url, listId) {
   .then(data => {
       const listElement = document.getElementById(listId);
       listElement.innerHTML = '';
+
       data.forEach(item => {
           const listItem = document.createElement('li');
           listItem.textContent = `${item.nome}: R$${item.valor}`;
           listItem.dataset.id = item.id; // Armazena o ID do item no dataset
           listItem.onclick = () => listItem.classList.toggle('selected');
-          listElement.appendChild(listItem); // Adiciona cada item à lista
+          listElement.appendChild(listItem); // Adiciona cada item à lista 
       });
   })
+
+
+
   .catch(error => console.error(`Erro ao buscar dados de ${url}:`, error));
 }
 
@@ -49,7 +53,7 @@ fetch("http://localhost:3000/metas",{
   
 
 function removerMetas() {
-const postList = document.getElementById('post-list');
+const postList = document.getElementById('metas-list'); 
 const selectedItems = postList.querySelectorAll('.selected');
 selectedItems.forEach(item => {
     const postId = item.dataset.id;
@@ -79,7 +83,7 @@ function editarMetas(event) {
     const novoNome = prompt("Novo nome:");
     const novoValor = prompt("Novo valor:");
 
-    const postList = document.getElementById('post-list');
+    const postList = document.getElementById('metas-list');
     const selectedItems = postList.querySelectorAll('.selected');
     selectedItems.forEach(item => {
       const postId = item.dataset.id;
@@ -137,7 +141,7 @@ fetch("http://localhost:3000/gastos",{
 
 
 function removerGasto() {
-  const postList = document.getElementById('post-list');
+  const postList = document.getElementById('gastos-list');
   const selectedItems = postList.querySelectorAll('.selected');
   selectedItems.forEach(item => {
       const postId = item.dataset.id;
@@ -166,7 +170,7 @@ function removerGasto() {
     const novoNome = prompt("Novo nome:");
     const novoValor = prompt("Novo valor:");
 
-    const postList = document.getElementById('post-list');
+    const postList = document.getElementById('gastos-list');
     const selectedItems = postList.querySelectorAll('.selected');
     selectedItems.forEach(item => {
       const postId = item.dataset.id;
