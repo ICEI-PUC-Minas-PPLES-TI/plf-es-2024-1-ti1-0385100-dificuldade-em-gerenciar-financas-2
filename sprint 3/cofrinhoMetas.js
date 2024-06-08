@@ -7,7 +7,7 @@ function loadData(url, listId) {
 
       data.forEach(item => {
           const listItem = document.createElement('li');
-          listItem.textContent = `${item.nome}: R$${item.valor}`;
+          listItem.textContent = `${item.descricao}: R$${item.valor}`;
           listItem.dataset.id = item.id; // Armazena o ID do item no dataset
           listItem.onclick = () => listItem.classList.toggle('selected');
           listElement.appendChild(listItem); // Adiciona cada item à lista 
@@ -27,7 +27,7 @@ loadData('http://localhost:3000/gastos', 'gastos-list');
 
 
 function adicionarMetas(){
-    const nome = prompt("Qual o nome")
+    const descricao = prompt("Qual o nome")
     const valor = prompt("qual o valor")
     
 fetch("http://localhost:3000/metas",{
@@ -37,7 +37,7 @@ fetch("http://localhost:3000/metas",{
     },
     body: JSON.stringify({
       idCliente: null,
-        nome: nome,
+      descricao: nome,
         valor: valor
     })
   })
@@ -96,7 +96,7 @@ function editarMetas(event) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          nome: novoNome,
+          descricao: novoNome,
           valor: novoValor
         })
       })
@@ -127,7 +127,7 @@ fetch("http://localhost:3000/gastos",{
   },
   body: JSON.stringify({
     idCliente: null,
-      nome: nome,
+    descricao: nome,
       valor: valor
   })
 })
@@ -183,7 +183,7 @@ function removerGasto() {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          nome: novoNome,
+          descricao: novoNome,
           valor: novoValor
         })
       })

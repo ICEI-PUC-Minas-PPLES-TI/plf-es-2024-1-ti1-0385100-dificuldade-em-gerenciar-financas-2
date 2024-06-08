@@ -1,15 +1,15 @@
 {
-  "saldo": [
+  "entradas": [
     {
       "id": "937b",
       "idCliente": null,
-      "nome": "a",
+      "descricao": "a",
       "valor": "100"
     },
     {
       "id": "f11a",
       "idCliente": null,
-      "nome": "b",
+      "descricao": "b",
       "valor": "29"
     }
   ],
@@ -17,13 +17,13 @@
     {
       "id": "ee43",
       "idCliente": null,
-      "nome": "s",
+      "descricao": "s",
       "valor": "30"
     }
   ],
   "metas": [
     {
-      "nome": "sss",
+      "descricao": "sss",
       "valor": "12",
       "id": "c1b0"
     }

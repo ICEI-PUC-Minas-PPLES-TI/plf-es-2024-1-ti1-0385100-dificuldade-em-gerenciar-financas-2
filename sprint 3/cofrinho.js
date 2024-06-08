@@ -2,7 +2,7 @@ function adicionarSaldo(){
     const nome = prompt("Qual o nome")
     const valor = prompt("qual o valor")
     
-fetch("http://localhost:3000/saldo",{
+fetch("http://localhost:3000/entradas",{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -22,7 +22,7 @@ fetch("http://localhost:3000/saldo",{
 }
 
 function loadPosts() {
-  fetch('http://localhost:3000/saldo')
+  fetch('http://localhost:3000/entradas')
   .then(response => response.json())
   .then(data => {
       const postList = document.getElementById('saldo-list');
@@ -31,7 +31,7 @@ function loadPosts() {
 
       data.forEach(post => {
           const listItem = document.createElement('li');
-          listItem.textContent = `${post.nome}: R$${post.valor}`;
+          listItem.textContent = `${post.descricao}: R$${post.valor}`;
           listItem.dataset.id = post.id; // Armazena o id do post no dataset
           listItem.onclick = () => listItem.classList.toggle('selected');
           postList.appendChild(listItem);  // Anexa cada item de lista à lista de posts
@@ -47,7 +47,7 @@ function removerSaldo() {
 const selectedItems = postList.querySelectorAll('.selected');
 selectedItems.forEach(item => {
     const postId = item.dataset.id;
-    fetch(`http://localhost:3000/saldo/${postId}`, {
+    fetch(`http://localhost:3000/entradas/${postId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -78,13 +78,13 @@ function editarSaldo(event) {
       const postId = item.dataset.id;
 
       console.log(`Atualizando post com ID: ${postId}`);
-      fetch(`http://localhost:3000/saldo/${postId}`, {
+      fetch(`http://localhost:3000/entradas/${postId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          nome: novoNome,
+          descricao: novoNome,
           valor: novoValor
         })
       })
@@ -107,7 +107,7 @@ function editarSaldo(event) {
 loadPosts();
 
 function calcularSaldoLiquido() {
-  fetch('http://localhost:3000/saldo')
+  fetch('http://localhost:3000/entradas')
   .then(response => response.json())
   .then(saldoData => {
       // Calcula o total de entradas
