@@ -1,0 +1,58 @@
+
+.logo
+{
+  align-items: start;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff8d21;
+  text-align: center;
+  box-sizing: content-box;
+  color: white;
+}
+
+
+.header-right {
+  float: right;
+}
+
+header img {
+  width: 100px;
+}
+
+
+  /* Estilo das células do cabeçalho da tabela */
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:not(:first-child):hover th{
+    background-color: #EEE8AA
+    ;
+  }
+
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff8d21;
+padding: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos adicionais para os links */
+.header-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+  

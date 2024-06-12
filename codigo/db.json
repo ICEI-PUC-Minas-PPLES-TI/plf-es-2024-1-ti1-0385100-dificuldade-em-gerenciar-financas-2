@@ -1,0 +1,38 @@
+{
+  "movimentacoes": [
+    {
+      "id": "b476",
+      "valor": "-5.00",
+      "descricao": "Comprei sorvete",
+      "data": {
+        "dia": "11",
+        "mes": "06",
+        "ano": "2024"
+      }
+    }
+  ],
+
+  "posts": [
+    {
+      "id": "926d",
+      "titulo": "7 dicas para controlar os gastos",
+      "autor": "Henrique Oliveira",
+      "conteudo": "Teste",
+      "categoria": "Gestão de gastos"
+    },
+    {
+      "id": "3010",
+      "titulo": "Criptomoedas: o que são? Como funcionam?",
+      "autor": "Frederico Soares",
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dapibus metus a tortor blandit, et facilisis ligula consequat. Donec quam libero, tempus bibendum cursus nec, sagittis sed tortor. Pellentesque at neque ex. Nam auctor massa mauris, sed condimentum odio lacinia posuere. Proin ipsum nunc, auctor vel sollicitudin eget, ultrices id.",
+      "categoria": "Cripto"
+    },
+    {
+      "id": "366b",
+      "titulo": "Como economizar nas compras",
+      "autor": "Bartolomeu Aguiar",
+      "conteudo": "Teste",
+      "categoria": "Gestão de gastos"
+    }
+  ]
+}
