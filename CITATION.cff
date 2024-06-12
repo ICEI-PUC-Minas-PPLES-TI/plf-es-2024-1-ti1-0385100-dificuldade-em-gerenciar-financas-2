@@ -3,26 +3,22 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Luppi Mendonça
+    given-names: Luiz Felipe
+  - family-names: Lemos
+    given-names: Pedro
+  - family-names: Alvarez
+    given-names: Bernardo 
+  - family-names: Cohen Bouissou
+    given-names: Ilan
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Alves Nogueira
+    given-names: Simone
 keywords:
   - 
   - 
@@ -35,26 +31,22 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Luppi Mendonça
+    given-names: Luiz Felipe
+  - family-names: Lemos
+    given-names: Pedro
+  - family-names: Alvarez
+    given-names: Bernardo 
+  - family-names: Cohen Bouissou
+    given-names: Ilan
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Alves Nogueira
+    given-names: Simone
 keywords:
   - 
   - 
