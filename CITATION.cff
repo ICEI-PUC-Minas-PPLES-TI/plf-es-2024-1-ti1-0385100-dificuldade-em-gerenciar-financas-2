@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Cofrinho
 authors:
   - family-names: Luppi Mendonça
     given-names: Luiz Felipe
@@ -48,8 +48,8 @@ authors:
     family-names: Alves Nogueira
     given-names: Simone
 keywords:
-  - 
-  - 
+  - Financeiro
+  - Gastos
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
