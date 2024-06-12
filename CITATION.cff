@@ -1,27 +1,27 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: Cofrinho
+title: "Cofrinho"
 authors:
-  - family-names: Luppi Mendonça
-    given-names: Luiz Felipe
-  - family-names: Lemos
-    given-names: Pedro
-  - family-names: Alvarez
-    given-names: Bernardo 
-  - family-names: Cohen Bouissou
-    given-names: Ilan
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: Vieira Carneiro
-    given-names: Rommel
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: Alves Nogueira
-    given-names: Simone
+  - family-names: "Luppi Mendonça"
+    given-names: "Luiz Felipe"
+  - family-names: "Lemos"
+    given-names: "Pedro"
+  - family-names: "Alvarez"
+    given-names: "Bernardo"
+  - family-names: "Cohen Bouissou"
+    given-names: "Ilan"
+  - name-suffix: "Professor"
+    affiliation: "PUC Minas"
+    family-names: "Vieira Carneiro"
+    given-names: "Rommel"
+  - name-suffix: "Professor"
+    affiliation: "PUC Minas"
+    family-names: "Alves Nogueira"
+    given-names: "Simone"
 keywords:
-  - Financeiro
-  - Gastos
+  - "Financeiro"
+  - "Gastos"
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
@@ -29,27 +29,27 @@ date-released: 2022-07-14
 =======
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: Cofrinho
+title: "Cofrinho"
 authors:
-  - family-names: Luppi Mendonça
-    given-names: Luiz Felipe
-  - family-names: Lemos
-    given-names: Pedro
-  - family-names: Alvarez
-    given-names: Bernardo 
-  - family-names: Cohen Bouissou
-    given-names: Ilan
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: Vieira Carneiro
-    given-names: Rommel
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: Alves Nogueira
-    given-names: Simone
+  - family-names: "Luppi Mendonça"
+    given-names: "Luiz Felipe"
+  - family-names: "Lemos"
+    given-names: "Pedro"
+  - family-names: "Alvarez"
+    given-names: "Bernardo"
+  - family-names: "Cohen Bouissou"
+    given-names: "Ilan"
+  - name-suffix: "Professor"
+    affiliation: "PUC Minas"
+    family-names: "Vieira Carneiro"
+    given-names: "Rommel"
+  - name-suffix: "Professor"
+    affiliation: "PUC Minas"
+    family-names: "Alves Nogueira"
+    given-names: "Simone"
 keywords:
-  - Financeiro
-  - Gastos
+  - "Financeiro"
+  - "Gastos"
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
