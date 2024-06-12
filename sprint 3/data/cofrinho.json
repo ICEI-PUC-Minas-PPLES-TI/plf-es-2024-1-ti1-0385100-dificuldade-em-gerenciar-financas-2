@@ -1,31 +1,49 @@
 {
   "entradas": [
     {
-      "id": "937b",
+      "id": "160b",
       "idCliente": null,
-      "descricao": "a",
-      "valor": "100"
+      "descricao": "salario 1000",
+      "valor": "1000"
     },
     {
-      "id": "f11a",
+      "id": "7327",
       "idCliente": null,
-      "descricao": "b",
-      "valor": "29"
+      "descricao": "bicos",
+      "valor": "400"
+    },
+    {
+      "id": "3b6f",
+      "idCliente": null,
+      "descricao": "ajuda mensal",
+      "valor": "500"
     }
   ],
   "gastos": [
     {
-      "id": "ee43",
+      "id": "4747",
       "idCliente": null,
-      "descricao": "s",
-      "valor": "30"
+      "descricao": "mercado",
+      "valor": "300"
+    },
+    {
+      "id": "a354",
+      "idCliente": null,
+      "descricao": "escola",
+      "valor": "1000"
+    },
+    {
+      "id": "bd54",
+      "idCliente": null,
+      "descricao": "lazer",
+      "valor": "500"
     }
   ],
   "metas": [
     {
-      "descricao": "sss",
-      "valor": "12",
-      "id": "c1b0"
+      "descricao": "carro ",
+      "valor": "1000",
+      "id": "3df8"
     }
   ]
 }

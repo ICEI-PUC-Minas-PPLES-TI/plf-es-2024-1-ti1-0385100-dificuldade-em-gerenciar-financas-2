@@ -9,7 +9,7 @@ fetch("http://localhost:3000/entradas",{
     },
     body: JSON.stringify({
       idCliente: null,
-        nome: nome,
+        descricao: nome,
         valor: valor
     })
   })
@@ -125,10 +125,22 @@ function calcularSaldoLiquido() {
           console.log("Total de Entradas:", total_entradas);
           console.log("Total de Saídas:", total_saidas);
           console.log("Saldo Líquido:", total_liquido);
+          document.getElementById("saldo").innerHTML = ("R$:" + total_liquido)
+
+          if(total_liquido < 0){
+            document.getElementById("saldo").style.color = "rgb(255, 0, 0)";
+          }
+          else{
+            document.getElementById("saldo").style.color = "rgb(0, 255, 0)";
+        }
       })
       .catch(error => console.error('Erro ao buscar gastos:', error));
   })
   .catch(error => console.error('Erro ao buscar saldo:', error));
+
+
+
+
 }
 
 // Chamando a função para calcular o saldo líquido

@@ -37,7 +37,7 @@ fetch("http://localhost:3000/metas",{
     },
     body: JSON.stringify({
       idCliente: null,
-      descricao: nome,
+      descricao: descricao,
         valor: valor
     })
   })
