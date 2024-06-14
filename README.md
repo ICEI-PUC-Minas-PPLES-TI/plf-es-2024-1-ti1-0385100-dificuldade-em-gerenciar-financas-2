@@ -1,6 +1,6 @@
-# Nome do projeto
+# Cofrinho
 
-O projeto tem como objetivo disponibilizar uma plataforma que oferece aos usuários recursos e ferramentas para o planejamento e gestão de suas finanças, despesas e investimentos financeiros.
+O projeto Cofrinho tem como objetivo disponibilizar uma plataforma que oferece aos usuários recursos e ferramentas para o planejamento e gestão de suas finanças, despesas e investimentos financeiros.
 
 ## Alunos integrantes da equipe
 
