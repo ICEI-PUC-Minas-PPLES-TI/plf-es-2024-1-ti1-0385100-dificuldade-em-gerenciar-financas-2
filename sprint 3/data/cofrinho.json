@@ -37,6 +37,12 @@
       "idCliente": null,
       "descricao": "lazer",
       "valor": "500"
+    },
+    {
+      "id": "9498",
+      "idCliente": null,
+      "descricao": "fatal model",
+      "valor": "50"
     }
   ],
   "metas": [
@@ -44,6 +50,28 @@
       "descricao": "carro ",
       "valor": "1000",
       "id": "3df8"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "9474",
+      "username": "311",
+      "password": "322"
+    },
+    {
+      "id": "69a7",
+      "username": "adrian",
+      "password": "123"
+    },
+    {
+      "id": "6e23",
+      "username": "danielklein",
+      "password": "123"
+    },
+    {
+      "id": "d4ba",
+      "username": "danielklein1",
+      "password": "123"
     }
   ]
 }

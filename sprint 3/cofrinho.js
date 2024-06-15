@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // Recuperando o userId do Local Storage
+  const userId = localStorage.getItem("userId");
+  if (userId) {
+    console.log("ID do usuário logado:", userId);
+    // Use o userId conforme necessário
+  } else {
+    console.log("Nenhum usuário logado encontrado.");
+  }
+});
+
 function adicionarSaldo(){
     const nome = prompt("Qual o nome")
     const valor = prompt("qual o valor")
@@ -8,7 +19,7 @@ fetch("http://localhost:3000/entradas",{
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      idCliente: null,
+        idCliente: idLogado,
         descricao: nome,
         valor: valor
     })
@@ -137,11 +148,9 @@ function calcularSaldoLiquido() {
       .catch(error => console.error('Erro ao buscar gastos:', error));
   })
   .catch(error => console.error('Erro ao buscar saldo:', error));
-
-
-
-
 }
-
 // Chamando a função para calcular o saldo líquido
 calcularSaldoLiquido();
+
+
+

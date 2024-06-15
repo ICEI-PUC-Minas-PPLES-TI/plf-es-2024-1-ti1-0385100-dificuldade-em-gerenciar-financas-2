@@ -18,7 +18,29 @@ fetch('http://localhost:3000/usuarios', {
   .then(response => response.json())
   .then(data => {
     console.log('Usuario adicionado', data);
-    loadPosts();  // Recarrega a lista de posts para refletir a adição
+    loadPosts();  
   })
   .catch(error => console.error('Erro ao adicionar usuario:', error));
 }
+
+
+function fazerlogin(){
+  event.preventDefault(); // Evita o envio do formulário
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  fetch('http://localhost:3000/usuarios')
+  .then(response => response.json())
+  .then(users => {
+    const user = users.find(user => user.username === username && user.password === password);
+
+    if (user) {
+      localStorage.setItem('userId', user.id);
+
+window.location.href = "cofrinho.html"
+    } else {
+      alert('Não foi possivel logar');
+    }
+  })
+  .catch(error => console.error('Error fetching the JSON:', error));
+};
