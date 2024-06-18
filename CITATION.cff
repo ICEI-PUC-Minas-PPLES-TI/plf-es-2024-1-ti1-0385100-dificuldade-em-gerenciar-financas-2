@@ -3,63 +3,63 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Barros Lemos 
+    given-names:  Pedro 
+  - family-names:  Luppi Mendonça
+    given-names: Luiz Felipe 
+  - family-names:  Alvarez de Souza Lima
+    given-names: Bernardo 
+  - family-names: Cohen Bouissou Santana
+    given-names: Ilan
   - family-names: 
     given-names: 
   - family-names: 
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Alves Nogueira
+    given-names: Simone 
 keywords:
   - 
   - 
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-07-14
 =======
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: 
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Barros Lemos 
+    given-names:  Pedro 
+  - family-names:  Luppi Mendonça
+    given-names: Luiz Felipe 
+  - family-names:  Alvarez de Souza Lima
+    given-names: Bernardo 
+  - family-names: Cohen Bouissou Santana
+    given-names: Ilan
   - family-names: 
     given-names: 
   - family-names: 
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Alves Nogueira
+    given-names: Simone 
 keywords:
   - 
   - 
 repository-code: 
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-07-14
 >>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605

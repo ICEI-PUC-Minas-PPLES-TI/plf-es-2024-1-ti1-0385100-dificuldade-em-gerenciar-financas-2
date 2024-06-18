@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ações da Bolsa de Valores</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html"><img class="logo" src="baixados (5).png" alt="Logo"></a>
+            <div class="header-right">
+                <a href="cofrinho.html">Cofrinho</a>
+                <a href="bolsaValores.html">B3</a>
+                <a href="crypto.html">Crypto</a>
+                <a href="areausuario.html">Área do usuário</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="tabela">
+        <h2>Bolsa de Valores em Tempo Real<br>Ações das 20 principais empresas no mundo</h2>
+        <button class="button" onclick="fetchStockData()">Atualizar Dados</button>
+        <table id="stockTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nome da ação</th>
+                    <th>Preço (Dólares)</th>
+                    <th>Variação (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./js/bolsaDeValores.js"></script>
+
+    <footer>
+        <p>Este é o rodapé.</p>
+    </footer>
+</body>
+</html>
