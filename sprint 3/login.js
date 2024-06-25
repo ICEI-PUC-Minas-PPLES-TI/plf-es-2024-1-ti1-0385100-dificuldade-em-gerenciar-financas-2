@@ -21,6 +21,8 @@ fetch('http://localhost:3000/usuarios', {
     loadPosts();  
   })
   .catch(error => console.error('Erro ao adicionar usuario:', error));
+
+  alert("Cadastrado com sucesso!!!")
 }
 
 

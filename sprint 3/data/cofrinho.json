@@ -1,55 +1,38 @@
 {
   "entradas": [
     {
-      "id": "160b",
-      "idCliente": null,
-      "descricao": "salario 1000",
+      "idCliente": "6e23",
+      "descricao": "teste",
+      "valor": "1234",
+      "id": "617c"
+    },
+    {
+      "id": "8b9b",
+      "idCliente": "ecd9",
+      "descricao": "teste 1",
       "valor": "1000"
-    },
-    {
-      "id": "7327",
-      "idCliente": null,
-      "descricao": "bicos",
-      "valor": "400"
-    },
-    {
-      "id": "3b6f",
-      "idCliente": null,
-      "descricao": "ajuda mensal",
-      "valor": "500"
     }
   ],
   "gastos": [
     {
-      "id": "4747",
-      "idCliente": null,
-      "descricao": "mercado",
-      "valor": "300"
+      "id": "1879",
+      "idCliente": "6e23",
+      "descricao": "teste",
+      "valor": "2345"
     },
     {
-      "id": "a354",
-      "idCliente": null,
-      "descricao": "escola",
-      "valor": "1000"
-    },
-    {
-      "id": "bd54",
-      "idCliente": null,
-      "descricao": "lazer",
-      "valor": "500"
-    },
-    {
-      "id": "9498",
-      "idCliente": null,
-      "descricao": "fatal model",
-      "valor": "50"
+      "id": "9520",
+      "idCliente": "ecd9",
+      "descricao": "teste 4",
+      "valor": "13457"
     }
   ],
   "metas": [
     {
-      "descricao": "carro ",
-      "valor": "1000",
-      "id": "3df8"
+      "idCliente": "6e23",
+      "descricao": "teste 3",
+      "valor": "123",
+      "id": "8d2d"
     }
   ],
   "usuarios": [
@@ -69,8 +52,13 @@
       "password": "123"
     },
     {
-      "id": "d4ba",
-      "username": "danielklein1",
+      "id": "ecd9",
+      "username": "pedro",
+      "password": "12345"
+    },
+    {
+      "id": "7bf1",
+      "username": "danielklein",
       "password": "123"
     }
   ]

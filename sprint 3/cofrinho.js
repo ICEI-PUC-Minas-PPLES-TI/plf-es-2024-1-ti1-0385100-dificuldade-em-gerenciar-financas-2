@@ -9,30 +9,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function adicionarSaldo(){
-    const nome = prompt("Qual o nome")
-    const valor = prompt("qual o valor")
-    
-fetch("http://localhost:3000/entradas",{
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        idCliente: idLogado,
-        descricao: nome,
-        valor: valor
-    })
+function adicionarSaldo() {
+  const nome = prompt("Qual o nome?");
+  const valor = prompt("Qual o valor?");
+  
+  const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
+  
+  fetch("http://localhost:3000/entradas", {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          idCliente: userId,
+          descricao: nome,
+          valor: valor
+      })
   })
   .then(response => response.json())
   .then(data => {
-    console.log('Usuario adicionado', data);
-    loadPosts();  // Recarrega a lista de posts para refletir a adição
+      console.log('Entrada de saldo adicionada:', data);
+      loadPosts();  // Recarrega a lista de entradas para refletir a adição
   })
-  .catch(error => console.error('Erro ao adicionar usuario:', error));
+  .catch(error => console.error('Erro ao adicionar entrada de saldo:', error));
 }
 
 function loadPosts() {
+  const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
+  
   fetch('http://localhost:3000/entradas')
   .then(response => response.json())
   .then(data => {
@@ -40,7 +44,9 @@ function loadPosts() {
       postList.innerHTML = '';
       let total_entradas = 0; // Inicializa a variável total
 
-      data.forEach(post => {
+      data
+        .filter(post => post.idCliente === userId) // Filtra as entradas pelo idCliente
+        .forEach(post => {
           const listItem = document.createElement('li');
           listItem.textContent = `${post.descricao}: R$${post.valor}`;
           listItem.dataset.id = post.id; // Armazena o id do post no dataset
@@ -55,80 +61,86 @@ function loadPosts() {
 
 function removerSaldo() {
   const postList = document.getElementById('saldo-list'); 
-const selectedItems = postList.querySelectorAll('.selected');
-selectedItems.forEach(item => {
+  const selectedItems = postList.querySelectorAll('.selected');
+  selectedItems.forEach(item => {
     const postId = item.dataset.id;
     fetch(`http://localhost:3000/entradas/${postId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
-          }
+        }
     })
     .then(response => {
         if (response.ok) {
-            item.remove(); // Remove item from the DOM if deletion was successful
+            item.remove(); // Remove item do DOM se a exclusão for bem-sucedida
             loadPosts();  // Recarrega a lista de posts para refletir a exclusão
         } else {
             console.error('Erro ao deletar o post:', response.statusText);
         }
     })
     .catch(error => console.error('Erro ao deletar o post:', error));
-});
+  });
 }
 
-
 function editarSaldo(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const novoNome = prompt("Novo nome:");
-    const novoValor = prompt("Novo valor:");
+  const novoNome = prompt("Novo nome:");
+  const novoValor = prompt("Novo valor:");
 
-    const postList = document.getElementById('saldo-list');
-    const selectedItems = postList.querySelectorAll('.selected');
-    selectedItems.forEach(item => {
+  const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
+  
+  const postList = document.getElementById('saldo-list');
+  const selectedItems = postList.querySelectorAll('.selected');
+  selectedItems.forEach(item => {
       const postId = item.dataset.id;
 
-      console.log(`Atualizando post com ID: ${postId}`);
       fetch(`http://localhost:3000/entradas/${postId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          descricao: novoNome,
-          valor: novoValor
-        })
+          method: 'PUT',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              idCliente: userId,
+              descricao: novoNome,
+              valor: novoValor
+          })
       })
       .then(response => {
-        if (!response.ok) {
-          throw new Error('Erro na atualização do post');
-        }
-        return response.json();
+          if (!response.ok) {
+              throw new Error('Erro na atualização da entrada de saldo');
+          }
+          return response.json();
       })
       .then(data => {
-        console.log('Post atualizado:', data);
-        loadPosts();  // Recarrega a lista de posts para refletir a atualização
+          console.log('Entrada de saldo atualizada:', data);
+          loadPosts();  // Recarrega a lista de entradas para refletir a atualização
       })
-      .catch(error => console.error('Erro ao atualizar post:', error));
-    });
-  }
-    
+      .catch(error => console.error('Erro ao atualizar entrada de saldo:', error));
+  });
+}
 
 // Call the function to load posts when the page loads
-loadPosts();
+document.addEventListener("DOMContentLoaded", loadPosts);
 
 function calcularSaldoLiquido() {
+  const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
+
   fetch('http://localhost:3000/entradas')
   .then(response => response.json())
   .then(saldoData => {
-      // Calcula o total de entradas
-      let total_entradas = saldoData.reduce((acc, post) => acc + parseInt(post.valor), 0);
+      // Filtra as entradas pelo idCliente
+      let total_entradas = saldoData
+        .filter(post => post.idCliente === userId)
+        .reduce((acc, post) => acc + parseInt(post.valor), 0);
 
       fetch('http://localhost:3000/gastos')
       .then(response => response.json())
       .then(gastosData => {
-          // Calcula o total de saídas
-          let total_saidas = gastosData.reduce((acc, post) => acc + parseInt(post.valor), 0);
+          // Filtra as saídas pelo idCliente
+          let total_saidas = gastosData
+            .filter(post => post.idCliente === userId)
+            .reduce((acc, post) => acc + parseInt(post.valor), 0);
 
           // Calcula o saldo líquido
           let total_liquido = total_entradas - total_saidas;
@@ -136,21 +148,18 @@ function calcularSaldoLiquido() {
           console.log("Total de Entradas:", total_entradas);
           console.log("Total de Saídas:", total_saidas);
           console.log("Saldo Líquido:", total_liquido);
-          document.getElementById("saldo").innerHTML = ("R$:" + total_liquido)
+          document.getElementById("saldo").innerHTML = ("R$:" + total_liquido);
 
-          if(total_liquido < 0){
+          if (total_liquido < 0) {
             document.getElementById("saldo").style.color = "rgb(255, 0, 0)";
-          }
-          else{
+          } else {
             document.getElementById("saldo").style.color = "rgb(0, 255, 0)";
-        }
+          }
       })
       .catch(error => console.error('Erro ao buscar gastos:', error));
   })
   .catch(error => console.error('Erro ao buscar saldo:', error));
 }
+
 // Chamando a função para calcular o saldo líquido
-calcularSaldoLiquido();
-
-
-
+document.addEventListener("DOMContentLoaded", calcularSaldoLiquido);
