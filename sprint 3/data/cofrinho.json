@@ -1,0 +1,65 @@
+{
+  "entradas": [
+    {
+      "idCliente": "6e23",
+      "descricao": "teste",
+      "valor": "1234",
+      "id": "617c"
+    },
+    {
+      "id": "8b9b",
+      "idCliente": "ecd9",
+      "descricao": "teste 1",
+      "valor": "1000"
+    }
+  ],
+  "gastos": [
+    {
+      "id": "1879",
+      "idCliente": "6e23",
+      "descricao": "teste",
+      "valor": "2345"
+    },
+    {
+      "id": "9520",
+      "idCliente": "ecd9",
+      "descricao": "teste 4",
+      "valor": "13457"
+    }
+  ],
+  "metas": [
+    {
+      "idCliente": "6e23",
+      "descricao": "teste 3",
+      "valor": "123",
+      "id": "8d2d"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "9474",
+      "username": "311",
+      "password": "322"
+    },
+    {
+      "id": "69a7",
+      "username": "adrian",
+      "password": "123"
+    },
+    {
+      "id": "6e23",
+      "username": "danielklein",
+      "password": "123"
+    },
+    {
+      "id": "ecd9",
+      "username": "pedro",
+      "password": "12345"
+    },
+    {
+      "id": "7bf1",
+      "username": "danielklein",
+      "password": "123"
+    }
+  ]
+}

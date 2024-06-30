@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+    <h1>Cadastro de Usuário</h1>
+    <form  id="cadastroForm">
+        <label for="username">Nome de usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button onclick="cadastrar()" type="submit">Cadastrar</button>
+    </form>
+<p><a href="login.html">Voltar para a pagina de login </a>  </p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

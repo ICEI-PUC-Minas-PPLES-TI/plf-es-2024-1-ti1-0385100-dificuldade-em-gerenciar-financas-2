@@ -1,0 +1,42 @@
+.fileira{
+display: flex;
+justify-content: space-around;
+}
+
+    .quadro {
+            border: 1px solid black;
+            width: 42%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .button-container button {
+            margin: 5px 0;
+            flex-direction: column;
+        }
+
+
+        .selected {
+            background-color: #d3d3d3; /* Highlight selected items */
+        }
+
+
+#saldo{
+    font-size: 30px;
+}
