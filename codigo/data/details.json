@@ -1,0 +1,83 @@
+{
+    "AAPL": {
+        "description": "Apple Inc. é uma empresa multinacional de tecnologia americana com sede em Cupertino, Califórnia.",
+        "sector": "Tecnologia"
+    },
+    "MSFT": {
+        "description": "Microsoft Corporation é uma empresa multinacional de tecnologia americana com sede em Redmond, Washington.",
+        "sector": "Tecnologia"
+    },
+    "GOOGL": {
+        "description": "Alphabet Inc. é a empresa-mãe do Google, uma multinacional de tecnologia americana.",
+        "sector": "Tecnologia"
+    },
+    "AMZN": {
+        "description": "Amazon.com, Inc. é uma empresa multinacional de tecnologia americana com foco em comércio eletrônico, computação em nuvem, streaming e inteligência artificial.",
+        "sector": "Consumo Discricionário"
+    },
+    "TSLA": {
+        "description": "Tesla, Inc. é uma empresa americana de automóveis e armazenamento de energia com sede em Palo Alto, Califórnia.",
+        "sector": "Consumo Discricionário"
+    },
+    "FB": {
+        "description": "Meta Platforms, Inc. (anteriormente Facebook, Inc.) é uma empresa americana de tecnologia e mídia social com sede em Menlo Park, Califórnia.",
+        "sector": "Tecnologia"
+    },
+    "NFLX": {
+        "description": "Netflix, Inc. é uma empresa americana de streaming de mídia e produção com sede em Los Gatos, Califórnia.",
+        "sector": "Comunicação"
+    },
+    "NVDA": {
+        "description": "NVIDIA Corporation é uma empresa americana de tecnologia com sede em Santa Clara, Califórnia, que projeta unidades de processamento gráfico (GPUs) para os mercados de jogos e profissionais, bem como unidades de sistema em chip (SoCs) para o mercado móvel e automotivo.",
+        "sector": "Tecnologia"
+    },
+    "JPM": {
+        "description": "JPMorgan Chase & Co. é uma holding financeira multinacional americana com sede em Nova Iorque.",
+        "sector": "Financeiro"
+    },
+    "V": {
+        "description": "Visa Inc. é uma empresa multinacional americana de serviços financeiros com sede em Foster City, Califórnia.",
+        "sector": "Financeiro"
+    },
+    "JNJ": {
+        "description": "Johnson & Johnson é uma corporação multinacional americana fundada em 1886 que desenvolve dispositivos médicos, produtos farmacêuticos e bens de consumo embalados.",
+        "sector": "Saúde"
+    },
+    "WMT": {
+        "description": "Walmart Inc. é uma multinacional americana de varejo que opera uma cadeia de hipermercados, lojas de desconto e mercearias.",
+        "sector": "Consumo Discricionário"
+    },
+    "PG": {
+        "description": "The Procter & Gamble Company (P&G) é uma corporação multinacional americana de bens de consumo.",
+        "sector": "Consumo Básico"
+    },
+    "MA": {
+        "description": "Mastercard Incorporated é uma corporação multinacional americana de serviços financeiros com sede em Purchase, Nova Iorque.",
+        "sector": "Financeiro"
+    },
+    "DIS": {
+        "description": "The Walt Disney Company, comumente conhecida como Disney, é uma conglomerado de mídia de massa e entretenimento multinacional americano.",
+        "sector": "Comunicação"
+    },
+    "HD": {
+        "description": "The Home Depot, Inc. é a maior varejista de melhorias para a casa nos Estados Unidos, fornecendo ferramentas, produtos de construção e serviços.",
+        "sector": "Consumo Discricionário"
+    },
+    "PYPL": {
+        "description": "PayPal Holdings, Inc. é uma empresa americana que opera um sistema de pagamentos online global que suporta transferências de dinheiro online.",
+        "sector": "Tecnologia"
+    },
+    "CMCSA": {
+        "description": "Comcast Corporation é a maior empresa de TV a cabo e a maior empresa de serviços de Internet residencial nos Estados Unidos.",
+        "sector": "Comunicação"
+    },
+    "XOM": {
+        "description": "Exxon Mobil Corporation é uma corporação multinacional americana de petróleo e gás.",
+        "sector": "Energia"
+    },
+    "PFE": {
+        "description": "Pfizer Inc. é uma corporação farmacêutica e biotecnológica multinacional americana.",
+        "sector": "Saúde"
+    }
+}
+
