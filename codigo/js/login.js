@@ -4,7 +4,7 @@ function cadastrar() {
     const novoUsername = document.getElementById('username').value;
     const novaPassword = document.getElementById('password').value;
 
-fetch('http://localhost:3000/usuarios', {
+fetch('https://json-vercel-five.vercel.app/usuarios', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ function fazerlogin(){
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
-  fetch('http://localhost:3000/usuarios')
+  fetch('https://json-vercel-five.vercel.app/usuarios')
   .then(response => response.json())
   .then(users => {
     const user = users.find(user => user.username === username && user.password === password);
