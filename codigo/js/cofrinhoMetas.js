@@ -21,10 +21,10 @@ function loadData(url, listId) {
 }
 
 // Para carregar as metas
-loadData('http://localhost:3000/metas', 'metas-list');
+loadData('https://json-vercel-five.vercel.app/metas', 'metas-list');
 
 // Para carregar os gastos
-loadData('http://localhost:3000/gastos', 'gastos-list');
+loadData('https://json-vercel-five.vercel.app/gastos', 'gastos-list');
 
 
 function adicionarMetas() {
@@ -33,7 +33,7 @@ function adicionarMetas() {
     
     const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
     
-    fetch("http://localhost:3000/metas", {
+    fetch("https://json-vercel-five.vercel.app/metas", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ function adicionarMetas() {
     .then(response => response.json())
     .then(data => {
         console.log('Meta adicionada:', data);
-        loadData('http://localhost:3000/metas', 'metas-list');  // Recarrega a lista de metas para refletir a adição
+        loadData('https://json-vercel-five.vercel.app/metas', 'metas-list');  // Recarrega a lista de metas para refletir a adição
     })
     .catch(error => console.error('Erro ao adicionar meta:', error));
 }
@@ -68,7 +68,7 @@ function removerMetas() {
         .then(response => {
             if (response.ok) {
                 item.remove(); // Remove item do DOM se a exclusão for bem-sucedida
-                loadData('http://localhost:3000/metas', 'metas-list');  // Recarrega a lista de metas para refletir a exclusão
+                loadData('https://json-vercel-five.vercel.app/metas', 'metas-list');  // Recarrega a lista de metas para refletir a exclusão
             } else {
                 console.error('Erro ao deletar meta:', response.statusText);
             }
@@ -89,7 +89,7 @@ function editarMetas(event) {
     selectedItems.forEach(item => {
         const postId = item.dataset.id;
 
-        fetch(`http://localhost:3000/metas/${postId}`, {
+        fetch(`https://json-vercel-five.vercel.app/metas/${postId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ function editarMetas(event) {
         })
         .then(data => {
             console.log('Meta atualizada:', data);
-            loadData('http://localhost:3000/metas', 'metas-list');  // Recarrega a lista de metas para refletir a atualização
+            loadData('https://json-vercel-five.vercel.app/metas', 'metas-list');  // Recarrega a lista de metas para refletir a atualização
         })
         .catch(error => console.error('Erro ao atualizar meta:', error));
     });
@@ -122,7 +122,7 @@ function adicionarGasto() {
     
     const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
     
-    fetch("http://localhost:3000/gastos", {
+    fetch("https://json-vercel-five.vercel.app/gastos", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -136,7 +136,7 @@ function adicionarGasto() {
     .then(response => response.json())
     .then(data => {
         console.log('Gasto adicionado:', data);
-        loadData('http://localhost:3000/gastos', 'gastos-list');  // Recarrega a lista de gastos para refletir a adição
+        loadData('https://json-vercel-five.vercel.app/gastos', 'gastos-list');  // Recarrega a lista de gastos para refletir a adição
     })
     .catch(error => console.error('Erro ao adicionar gasto:', error));
 }
@@ -148,7 +148,7 @@ function removerGasto() {
     selectedItems.forEach(item => {
         const postId = item.dataset.id;
         
-        fetch(`http://localhost:3000/gastos/${postId}`, {
+        fetch(`https://json-vercel-five.vercel.app/gastos/${postId}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -178,7 +178,7 @@ function editarGasto(event) {
     selectedItems.forEach(item => {
         const postId = item.dataset.id;
 
-        fetch(`http://localhost:3000/gastos/${postId}`, {
+        fetch(`https://json-vercel-five.vercel.app/gastos/${postId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -197,7 +197,7 @@ function editarGasto(event) {
         })
         .then(data => {
             console.log('Gasto atualizado:', data);
-            loadData('http://localhost:3000/gastos', 'gastos-list');  // Recarrega a lista de gastos para refletir a atualização
+            loadData('https://json-vercel-five.vercel.app/gastos', 'gastos-list');  // Recarrega a lista de gastos para refletir a atualização
         })
         .catch(error => console.error('Erro ao atualizar gasto:', error));
     });
@@ -206,7 +206,7 @@ function editarGasto(event) {
 
 
 window.onload = () => {
-    loadData('http://localhost:3000/entradas', 'saldo-list');  // Carregar as entradas
-    loadData('http://localhost:3000/metas', 'metas-list');      // Carregar as metas
-    loadData('http://localhost:3000/gastos', 'gastos-list');    // Carregar os gastos
+    loadData('https://json-vercel-five.vercel.app/entradas', 'saldo-list');  // Carregar as entradas
+    loadData('https://json-vercel-five.vercel.app/metas', 'metas-list');      // Carregar as metas
+    loadData('https://json-vercel-five.vercel.app/gastos', 'gastos-list');    // Carregar os gastos
 };
