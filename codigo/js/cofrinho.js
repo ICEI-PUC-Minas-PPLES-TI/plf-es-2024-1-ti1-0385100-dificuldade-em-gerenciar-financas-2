@@ -15,7 +15,7 @@ function adicionarSaldo() {
   
   const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
   
-  fetch("http://localhost:3000/entradas", {
+  fetch("https://json-vercel-five.vercel.app/entradas", {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
@@ -95,7 +95,7 @@ function editarSaldo(event) {
   selectedItems.forEach(item => {
       const postId = item.dataset.id;
 
-      fetch(`http://localhost:3000/entradas/${postId}`, {
+      fetch(`https://json-vercel-five.vercel.app/entradas/${postId}`, {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json'
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", loadPosts);
 function calcularSaldoLiquido() {
   const userId = localStorage.getItem("userId"); // Recupera o userId do Local Storage
 
-  fetch('http://localhost:3000/entradas')
+  fetch('https://json-vercel-five.vercel.app/entradas')
   .then(response => response.json())
   .then(saldoData => {
       // Filtra as entradas pelo idCliente
