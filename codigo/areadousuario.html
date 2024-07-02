@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Área do usuário</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="./css/cofrinho.css">
+    <title>Área do usuário</title>
+  
 </head>
+<body>
+    <h2>Bem vindo</h2>
+    <a href="cofrinho.html">Ver meu cofrinho</a>
+    <button id="sair">sair</button>
 
-<h2> Bem vindo</h2>
+    <script>
+        document.getElementById('sair').addEventListener('click', function() {
+            localStorage.clear();
+        });
+    </script>
+</body>
+</html>
+<style>
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+a {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c82333;
+}
+
+</style>

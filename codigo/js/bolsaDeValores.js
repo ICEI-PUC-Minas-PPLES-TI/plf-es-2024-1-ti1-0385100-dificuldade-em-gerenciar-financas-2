@@ -1,11 +1,11 @@
-const apiKey = 'cpll2tpr01qn8g1uv7ogcpll2tpr01qn8g1uv7p0'; // Substitua 'YOUR_FINNHUB_API_KEY' pela sua chave da API Finnhub
+const apiKey = 'cq1ftthr01qjh3d5mingcq1ftthr01qjh3d5mio0'; // Substitua 'YOUR_FINNHUB_API_KEY' pela sua chave da API Finnhub
 
 async function fetchStockData() {
     const stockTableBody = document.querySelector('#stockTable tbody');
     stockTableBody.innerHTML = ''; // Limpa a tabela antes de adicionar novos dados
 
     // Carregar os dados das ações a partir do arquivo JSON
-    const response = await fetch('stocks.json');
+    const response = await fetch('./data/stocks.json');
     const stocks = await response.json();
 
     for (const stock of stocks) {

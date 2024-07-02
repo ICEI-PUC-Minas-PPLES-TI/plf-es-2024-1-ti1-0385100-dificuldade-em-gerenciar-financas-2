@@ -52,3 +52,28 @@ fetch('./data/blog.json')
       }
     })
     .catch(error => console.error('Ocorreu um erro ao carregar os dados:', error));
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Endpoint da API de câmbio em relação ao real (BRL)
+      const apiUrl = 'https://api.exchangerate-api.com/v4/latest/BRL';
+  
+      // Selecionando os elementos onde vamos inserir as taxas de câmbio
+      const usdRateElement = document.getElementById('usd-rate');
+      const eurRateElement = document.getElementById('eur-rate');
+  
+      // Fazendo a requisição para a API
+      fetch(apiUrl)
+          .then(response => response.json())
+          .then(data => {
+              // Acessando os dados das taxas de câmbio
+              const usdRate = (1 / data.rates.USD).toFixed(2); // Valor de 1 USD em BRL
+              const eurRate = (1 / data.rates.EUR).toFixed(2); // Valor de 1 EUR em BRL
+  
+              // Atualizando o HTML com os valores em BRL obtidos
+              usdRateElement.textContent = usdRate;
+              eurRateElement.textContent = eurRate;
+          })
+          .catch(error => {
+              console.error('Erro ao obter as taxas de câmbio:', error);
+          });
+  });
