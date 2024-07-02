@@ -138,6 +138,40 @@ header img {
 }
 
 
+#intro, #blog {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1500px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#intro h2, #blog h2 {
+  color: #333;
+}
+
+.blog-post {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.blog-post h3 {
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+
+  #intro, #blog {
+      padding: 10px;
+      margin: 10px;
+  }
+}
+
+
   /* Estilo das células do cabeçalho da tabela */
   th {
     background-color: #f2f2f2;
@@ -222,6 +256,13 @@ input{
 
 
 
+
+#intro h2 {
+  text-align: center; /* Centralizar o parágrafo */
+}
+
+
+
 .tabela{
   padding: 5px;
   display: flex;
@@ -252,7 +293,13 @@ input{
   height: 200px;
 }
 
+
 #conteudo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.exchange{
   display: flex;
   justify-content: space-around;
 }

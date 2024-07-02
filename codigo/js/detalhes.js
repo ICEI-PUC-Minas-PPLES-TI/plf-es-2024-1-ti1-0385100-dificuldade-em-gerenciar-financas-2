@@ -1,4 +1,4 @@
-const apiKey = 'cpll2tpr01qn8g1uv7ogcpll2tpr01qn8g1uv7p0'; // Substitua 'YOUR_FINNHUB_API_KEY' pela sua chave da API Finnhub
+const apiKey = 'cq1ftthr01qjh3d5mingcq1ftthr01qjh3d5mio0'; // Substitua 'YOUR_FINNHUB_API_KEY' pela sua chave da API Finnhub
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('stockSymbol').textContent = symbol;
 
         // Carregar dados adicionais a partir do arquivo JSON
-        const responseDetails = await fetch('details.json');
+        const responseDetails = await fetch('./data/details.json');
         const details = await responseDetails.json();
         const stockDetails = details[symbol];
 
