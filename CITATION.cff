@@ -1,28 +1,28 @@
 cff-version: 1.0.1
-message: "Please cite this software using these metadata."
-title: "Cofrinho"
+message: Please cite this software using these metadata.
+title: Cofrinho
 authors: 
-  - family-names: "Barros Lemos"
+  - family-names: Barros Lemos
     given-names:  Pedro 
-  - family-names:  "Luppi Mendonça"
-    given-names: "Luiz Felipe"
-  - family-names:  "Alvarez de Souza Lima"
+  - family-names: Luppi Mendonça
+    given-names: Luiz Felipe
+  - family-names: Alvarez de Souza Lima
     given-names: Bernardo 
-  - family-names: "Cohen Bouissou Santana"
+  - family-names: Cohen Bouissou Santana
     given-names: Ilan
   - name-suffix: Professor
-    affiliation: "PUC Minas"
-    family-names: "Vieira Carneiro"
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
     given-names: Rommel
-  - name-suffix: "Professor"
-    affiliation: "PUC Minas"
-    family-names: "Alves Nogueira"
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alves Nogueira
     given-names: Simone 
 keywords:
   - Financeiro
   - Gastos
   - Dinheiro
-repository-code: 
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-2
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2024-07-14
